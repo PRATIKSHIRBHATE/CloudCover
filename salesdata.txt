@@ -1,0 +1,8 @@
+
+
+sales$sizzer = sales$item1_count[sales$item1 = sizzer]|sales$item2_count[sales$item2 = sizzer]|sales$item3_count[sales$item3 = sizzer]
+
+
+spread(long_df, item1,item1_count)
+
+df$sizzer = filter(df, item1 = sizzer | iterm2 = sizzer | iterm3 = sizzer ) %>% sum(item1_count+item2_count+item3_count)
